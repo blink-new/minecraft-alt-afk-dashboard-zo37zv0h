@@ -1,6 +1,6 @@
 import { Box, Flex, VStack, Button, Heading, Text, Container, HStack, SimpleGrid, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, FormControl, FormLabel, Input, ModalFooter, Tag, Icon, useToast, Select, Grid, Badge, Stat, StatLabel, StatNumber, StatHelpText, Progress } from "@chakra-ui/react";
-import { LayoutDashboard, Zap, Clock, Plus, Settings, Play, Pause, Trash2, Users, Activity, Globe } from "lucide-react";
-import { FaMinecraft } from "react-icons/fa";
+import { LayoutDashboard, Zap, Clock, Plus, Settings, Play, Pause, Trash2, Users, Activity, Globe, Gamepad2 } from "lucide-react";
+// Removed FaMinecraft import - icon doesn't exist in react-icons/fa
 import { motion, useCallback, useState } from "framer-motion";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
@@ -276,7 +276,7 @@ const AccountCard = ({ account, onToggle, onEdit, onDelete }) => {
               alignItems="center"
               justifyContent="center"
             >
-              <Icon as={FaMinecraft} w={6} h={6} color="#A259FF" />
+              <Icon as={Gamepad2} w={6} h={6} color="#A259FF" />
             </Box>
             <VStack align="start" spacing={1}>
               <Text color="white" fontWeight="bold" fontSize="lg">{account.username}</Text>
@@ -516,7 +516,7 @@ export default function App() {
                 {accounts.length === 0 ? (
                   <GlassCard p={12} textAlign="center">
                     <VStack spacing={4}>
-                      <Icon as={FaMinecraft} w={12} h={12} color="gray.500" />
+                      <Icon as={Gamepad2} w={12} h={12} color="gray.500" />
                       <Heading color="gray.400" fontSize="xl">No accounts yet</Heading>
                       <Text color="gray.500">Add your first Minecraft alt to get started</Text>
                       <MotionButton
